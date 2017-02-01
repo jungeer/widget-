@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zebra 插件使用</title>
+	<style>
+		ul li {
+			width: 200px;
+			height: 30px;
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+	</ul>
+	<script src = 'zebra.js'></script>
+	<script>
+		var list = document.querySelectorAll('li');
+		//zebra.config('red')
+		/*zebra.config({
+			bgColor1: 'red',
+			bgColor2: 'pink'
+		})*/
+		zebra.listen(list)
+
+	</script>
+</body>
+</html>
