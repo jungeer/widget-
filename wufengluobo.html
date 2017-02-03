@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝轮播</title>
+	<style>
+		#box {
+			position: relative;
+			width: 400px;
+			height: 300px;
+			margin: 100px auto;
+			border: 1px solid blue;
+			overflow: hidden;
+		}
+		#lunbo {
+			position: absolute;
+			left: 0px;
+			width: 2000px;
+			height: 300px;
+			transition: .5s;
+		}
+		.div {
+			float: left;
+			width: 400px;
+			height: 300px;
+		}
+		.div:nth-of-type(1), 
+		.div:nth-of-type(5) {
+			background-color: yellow;
+		}
+		.div:nth-of-type(2) {
+			background-color: green;
+		}
+		.div:nth-of-type(3) {
+			background-color: red;
+		}
+		.div:nth-of-type(4) {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<article id="box">
+		<div id="lunbo">
+			<div class="div">1</div>
+			<div class="div">2</div>
+			<div class="div">3</div>
+			<div class="div">4</div>
+			<div class="div">1</div>
+		</div>
+	</article>
+	<button id="btn">点击</button>
+	<script src = 'wufenglunbo.js'></script>
+	<script>
+		var divs = document.querySelectorAll(".div");
+		var lunbotu = document.querySelector("#lunbo");
+		lunbo.on(lunbotu)
+		/*var width = parseInt(getComputedStyle(divs[0], null).width);
+		var inter;
+		var len = divs.length;
+		inter = setInterval(move, 1000);
+		var i = 0;
+		var btn = document.querySelector("#btn");
+		btn.addEventListener('click', move, false);
+		function move () {
+			i++;
+			if (i == len) {
+				lunbo.style.transition = "0s";
+				lunbo.style.left = "0px";
+				i = 0;
+				setTimeout(move, 0);
+			} else {
+				lunbo.style.transition = "0.5s";
+				lunbo.style.left = -i * width + 'px';
+			}					
+		}*/
+	</script>
+</body>
+</html>

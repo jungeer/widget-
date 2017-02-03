@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渐变轮播</title>
+	<style>
+		div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 200px;
+			border: 1px solid yellow;
+			background-color: yellow;
+			opacity: 0;
+		}
+		.first {
+			background-color: yellow;
+		}
+		.second {
+			background-color: green;
+		}
+		.third {
+			background-color: red;
+		}
+	</style>
+	<script src = 'fadelunbo.js'></script>
+
+</head>
+<body>
+	<div class="first">1</div>
+	<div class="second">2</div>
+	<div class="third">3</div>
+	<div>4</div>	
+<script>
+	window.onload = function () {
+		//如果只想轮播某几个元素，可以给这些元素加上
+		//同一个类名，并监听
+		fade.listen('div');
+	}	
+	</script>
+</body>
+</html>
